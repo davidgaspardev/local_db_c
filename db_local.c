@@ -8,5 +8,11 @@ int main(int argc, char* const argv[]) {
 
   rc = sqlite3_open("test.db", &db);
 
-  return 1;
+  if(rc) {
+    fprintf(stderr, "[ ERROR ] Can't open database: %s\n", sqlite3_errmsg(db));
+    return 1;
+  } else {
+    fprintf(stderr, "[ OK ] Opened database successfully\n");
+    return 0;
+  }
 }
