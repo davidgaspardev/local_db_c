@@ -1,8 +1,12 @@
 #include <stdio.h>
+#include <sqlite3.h>
 
 int main(int argc, char* const argv[]) {
 
-  printf("Hello World!\n ");
+  sqlite3* db;
+  int rc;
+
+  rc = sqlite3_open("test.db", &db);
 
   return 1;
 }

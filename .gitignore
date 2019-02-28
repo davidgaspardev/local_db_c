@@ -1,0 +1,9 @@
+#
+# Database file
+#
+*.db
+
+#
+# Executable file
+#
+db
