@@ -20,6 +20,7 @@ int main(int argc, char* const argv[]) {
     return 1;
   } else {
     fprintf(stderr, "[ OK ] Opened database successfully\n");
+    sqlite3_close(db);
     return 0;
   }
 }
