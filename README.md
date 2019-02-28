@@ -6,6 +6,20 @@ DataBase Local made with C programming language, using the SQLite3 library. It h
 
 Use GCC compiler in version 7 or higher. In the build uses the *-lsqlite3* or *-l sqlite3* argument, to associate the SQLite3 library with the GCC.
 
+### Prerequisites
+
+What things you need to install the software and how to install them (Linux - Debian base)
+
+```
+sudo apt install sqlite3 libsqlite3-dev
+```
+
+If you want to read the docs
+
+```
+sudo apt install sqlite3-doc
+```
+
 ## SQLite3 Library in C language
 
 ### sqlite3_open(const char \*filename, sqlite3 \*\*ppDb)
