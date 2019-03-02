@@ -22,7 +22,9 @@ sudo apt install sqlite3-doc
 
 ## SQLite3 Library in C language
 
-### sqlite3_open(const char \*filename, sqlite3 \*\*ppDb)
+```
+sqlite3_open(const char *filename, sqlite3 **ppDb)
+```
 
 This routine opens a connection to an SQLite database file and returns a database connection object to be used by other SQLite routines.
 
@@ -30,7 +32,9 @@ If the filename argument is NULL or ':memory:', sqlite3_open() will create an in
 
 If the filename is not NULL, sqlite3_open() attempts to open the database file by using its value. If no file by that name exists, sqlite3_open() will open a new database file by that name.
 
-### sqlite3_exec(sqlite3*, const char \*sql, sqlite_callback, void \*data, char \*\*errmsg)
+```
+sqlite3_exec(sqlite3*, const char *sql, sqlite_callback, void *data, char **errmsg)
+```
 
 This routine provides a quick, easy way to execute SQL commands provided by sql argument which can consist of more than one SQL command.
 
@@ -38,7 +42,9 @@ Here, the first argument sqlite3 is an open database object, sqlite_callback is 
 
 SQLite3_exec() routine parses and executes every command given in the sql argument until it reaches the end of the string or encounters an error.
 
-### sqlite3_close(sqlite3\*)
+```
+sqlite3_close(sqlite3 *db)
+```
 
 This routine closes a database connection previously opened by a call to sqlite3_open(). All prepared statements associated with the connection should be finalized prior to closing the connection.
 
