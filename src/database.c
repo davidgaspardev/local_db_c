@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <sqlite3.h>
 
+#include "database.h"
+
 typedef struct {
   sqlite3* db;
   char* filename;
